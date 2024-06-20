@@ -8,6 +8,7 @@
 # ┗━━━┻━━┻┛┗┛┗┻┛╋╋┗━━━┻━━┻━┛┗━┛
 # The program was created by DIMFLIX
 
+
 # Функция для определения доступного устройства управления яркостью
 get_backlight_device() {
     local devices=$(ls /sys/class/backlight/)
@@ -47,11 +48,11 @@ brightness_icon() {
         3[0-9]%) icon="" ;;
         2[0-9]%) icon="" ;;
         1[0-9]%) icon="" ;;
-        [1-9]%) icon=" " ;;
+        [1-9]%) icon="" ;;
         100%) icon="";;
         50%) icon="";;
-        0%) icon=" " ;;  
-        *) icon=" " ;;
+        0%) icon="" ;;  
+        *) icon="" ;;
     esac 
 
     echo -n "${color}${icon}%{F-}"
